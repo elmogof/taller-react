@@ -1,16 +1,11 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import './index.css'
+import BookImage from './components/bookImage'
+import Author from './components/author'
+import Title from './components/title'
 
-function Book() {
-  // const numbers = [1, 2, 3, 4, 5, 6, 7]
-
-  // const book = {
-  //   author: 'Stephen King',
-  //   title: 'Cementerio de mascotas',
-  //   img_url: 'https://imagessl4.casadellibro.com/a/l/t7/94/9788497930994.jpg',
-  // }
-
+function Books() {
   const books = [
     {
       id: 1,
@@ -68,31 +63,33 @@ function Book() {
     //     'https://images-na.ssl-images-amazon.com/images/I/41BHPsvj5BL._SX327_BO1,204,203,200_.jpg',
     // },
   ]
-  // console.log('Lista de libros ', books[2])
 
   return (
-    <div className='container'>
+    <>
       {books.map((book) => {
         return (
           <div className='book' key={book.id}>
-            <img className='img-size' src={book.img_url} alt='portada libro' />
-            <h1>{book.author}</h1>
-            <p>{book.title}</p>
+            <BookImage img_url={book.img_url} />
+            <Author author={book.author} />
+            <Title title={book.title} />
           </div>
         )
       })}
+    </>
+  )
+}
 
-      {/* <h3>Mapeo por función map()</h3>
-      {numbers.map((number) => {
-        return <p key={number}>{number}</p>
-      })} */}
+function BookStore() {
+  return (
+    <div className='container'>
+      <Books />
     </div>
   )
 }
 
 ReactDom.render(
   <React.StrictMode>
-    <Book />
+    <BookStore />
   </React.StrictMode>,
   document.getElementById('root')
 )
