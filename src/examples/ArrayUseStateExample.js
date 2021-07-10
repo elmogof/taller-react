@@ -3,12 +3,21 @@ import { peopleList } from '../data/dataList'
 
 export default function ArrayUseStateExample() {
   const [people, setPeople] = useState(peopleList)
-  console.log(people)
 
   const deletePerson = (id) => {
     const filteredList = people.filter((person) => person.id !== id)
     setPeople(filteredList)
   }
+
+  const clearList = () => {
+    setPeople([])
+  }
+
+  const resetList = () => {
+    setPeople(peopleList)
+  }
+
+  console.log('Lista de personas: ', people)
 
   return (
     <div className='container'>
@@ -28,10 +37,10 @@ export default function ArrayUseStateExample() {
         })}
       </ul>
       <div style={{ display: 'flex' }}>
-        <button className='danger-btn' onClick={() => setPeople([])}>
+        <button className='danger-btn' onClick={() => clearList()}>
           Clear list
         </button>
-        <button className='normal-btn' onClick={() => setPeople(peopleList)}>
+        <button className='normal-btn' onClick={() => resetList()}>
           Reset list
         </button>
       </div>

@@ -10,8 +10,8 @@ ReactDom.render(
   <React.StrictMode>
     <ObjectUseStateExample />
     <ArrayUseStateExample />
-    <UseSatateExample />
-    {/* <BookStore /> */}
+    {/*<UseSatateExample />
+    <BookStore /> */}
   </React.StrictMode>,
   document.getElementById('root')
 )
