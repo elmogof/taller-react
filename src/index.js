@@ -9,8 +9,8 @@ import ObjectUseStateExample from './examples/ObjectUseStateExample'
 ReactDom.render(
   <React.StrictMode>
     <ObjectUseStateExample />
-    {/* <ArrayUseStateExample /> */}
-    {/* <UseSatateExample /> */}
+    <ArrayUseStateExample />
+    <UseSatateExample />
     {/* <BookStore /> */}
   </React.StrictMode>,
   document.getElementById('root')

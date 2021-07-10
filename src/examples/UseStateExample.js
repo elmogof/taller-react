@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 export default function UseStateExample() {
   const [title, setTitle] = useState('Hello, world!')
+
   const handleClick = () => {
     if (title === 'Hello, world!') {
       setTitle(`Hello i'm a useState example`)

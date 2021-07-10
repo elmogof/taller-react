@@ -1,4 +1,3 @@
-import { id } from 'postcss-selector-parser'
 import React, { useState } from 'react'
 import { peopleList } from '../data/dataList'
 

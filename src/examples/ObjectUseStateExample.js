@@ -8,13 +8,14 @@ export default function ObjectUseStateExample() {
     position: 'Backed developer',
     salary: '$2000',
   }
+
   const [developer, setDeveloper] = useState(exampleObject)
+
   const changePosition = () => {
     setDeveloper({
-      name: developer.name,
-      age: developer.age,
-      salary: developer.salary,
+      ...developer,
       position: 'Lead backend developer',
+      salary: '$3000',
     })
   }
   return (

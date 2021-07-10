@@ -120,14 +120,14 @@ img {
 }
 
 .card {
-    background-color: rgb(140, 185, 243);
-    margin: 0 3rem;
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: '. card-img  card-text card-btn';
     border-radius: 10px;
+    background-color: rgb(140, 185, 243);
+    margin: 0 3rem;
 }
 
 .card-img {
