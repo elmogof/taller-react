@@ -1,7 +1,24 @@
 import React, { useState } from 'react'
-import { peopleList } from '../data/dataList'
 
 export default function ArrayUseStateExample() {
+  const peopleList = [
+    {
+      id: 1,
+      name: 'Máx',
+    },
+    {
+      id: 2,
+      name: 'Héctor',
+    },
+    {
+      id: 3,
+      name: 'Azalea',
+    },
+    {
+      id: 4,
+      name: 'Cristhian',
+    },
+  ]
   const [people, setPeople] = useState(peopleList)
 
   const deletePerson = (id) => {
