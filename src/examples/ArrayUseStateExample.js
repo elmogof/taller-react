@@ -1,25 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { DataContext } from '../context/DataContext'
 
 export default function ArrayUseStateExample() {
-  const peopleList = [
-    {
-      id: 1,
-      name: 'Máx',
-    },
-    {
-      id: 2,
-      name: 'Héctor',
-    },
-    {
-      id: 3,
-      name: 'Azalea',
-    },
-    {
-      id: 4,
-      name: 'Cristhian',
-    },
-  ]
+  const { peopleList, booksList } = useContext(DataContext)
+
   const [people, setPeople] = useState(peopleList)
+
+  console.log(people)
+  console.log(booksList)
 
   const deletePerson = (id) => {
     const filteredList = people.filter((person) => person.id !== id)
@@ -34,30 +22,31 @@ export default function ArrayUseStateExample() {
     setPeople(peopleList)
   }
 
-  console.log('Lista de personas: ', people)
-
   return (
     <div className='container'>
       <h1 className='title'>Backend Developers List</h1>
-      <ul>
+      <ul style={{ padding: '0' }}>
         {people.map((person) => {
           const { id, name } = person
 
           return (
             <li className='list-item' key={id}>
-              <span>{name}</span>
-              <button className='list-btn' onClick={() => deletePerson(id)}>
+              <h2>{name}</h2>
+              <button
+                className='list-btn danger-btn'
+                onClick={() => deletePerson(id)}
+              >
                 Delete
               </button>
             </li>
           )
         })}
       </ul>
-      <div style={{ display: 'flex' }}>
-        <button className='danger-btn' onClick={() => clearList()}>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <button className='btn danger-btn' onClick={() => clearList()}>
           Clear list
         </button>
-        <button className='normal-btn' onClick={() => resetList()}>
+        <button className='btn normal-btn' onClick={() => resetList()}>
           Reset list
         </button>
       </div>

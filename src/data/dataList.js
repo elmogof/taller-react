@@ -73,3 +73,41 @@ export const peopleList = [
     name: 'Cristhian',
   },
 ]
+
+export const exampleObject = [
+  {
+    id: 1,
+    name: 'Juan Perez',
+    age: 30,
+    position: 'Backed developer',
+    salary: '$2000',
+  },
+  {
+    id: 2,
+    name: 'Juan Perez',
+    age: 30,
+    position: 'Backed developer',
+    salary: '$2000',
+  },
+  {
+    id: 3,
+    name: 'Juan Perez',
+    age: 30,
+    position: 'Backed developer',
+    salary: '$2000',
+  },
+  {
+    id: 4,
+    name: 'Juan Perez',
+    age: 30,
+    position: 'Backed developer',
+    salary: '$2000',
+  },
+  {
+    id: 5,
+    name: 'Juan Perez',
+    age: 30,
+    position: 'Backed developer',
+    salary: '$2000',
+  },
+]

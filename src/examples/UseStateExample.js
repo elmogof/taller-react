@@ -11,7 +11,7 @@ export default function UseStateExample() {
   return (
     <div className='container'>
       <h1 className='title'>{title}</h1>
-      <button className='btn' onClick={handleClick}>
+      <button className='btn normal-btn' onClick={handleClick}>
         Change state
       </button>
     </div>

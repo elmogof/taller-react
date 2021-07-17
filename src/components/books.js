@@ -1,9 +1,11 @@
 import BookImage from './bookImage'
 import Author from './author'
 import Title from './title'
-import { booksList } from '../data/dataList'
+import { useContext } from 'react'
+import { DataContext } from '../context/DataContext'
 
 export default function Books() {
+  const { booksList } = useContext(DataContext)
   return (
     <>
       {booksList.map((book) => {
